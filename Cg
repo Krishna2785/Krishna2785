@@ -1,0 +1,99 @@
+# i n c l u d e # i n c l u d e # i n c l u d e ‹ i o s t r e a m >
+‹ G L / g l . h ›
+‹GL/glut.h›
+u s i n g namespace s t d ;
+float x1,x2,y2, y3;
+i n t c h ;
+int s i g n ( f l o a t a) (
+i f (a<0) (
+return -1;
+if (a>0) {
+r e t u r n 1;
+}
+e l s e l
+r e t u r n 0 ;
+}
+}
+v o i d d i s p l a y (void) (
+giClear (GL_COLOR_BUFFER_BIT) :
+gIColor3£ (0.0,0.4,0.2) ;
+glBegin (GL glVertex2i (-640,0) ;
+g l Ve r t e x 2 i (640,0) ;
+g l Ve r t e x 2 i (0,480) ;
+glVertex2i (0, -480) ;
+float dy, dx,x,y,delx, dely, length;
+dx = x 2 - x 1 ;
+dy = y3-y2;
+i f ( a b s (dx) >=abs (dy) )
+l e n g t h = abs (dx) ;
+}
+e l s e
+{
+l e n g t h = a b s (dy) ;
+}
+d e l x = d e l y
+d x / l e n g t h ;
+= d y / l e n g t h ;
+x=x] + 0 . 5 * s i g n (delx) ;
+y=y2 + 0.5*sign (dely) ;
+glBegin (GL POINTS) ;
+glVertex21 (x, y) ;
+glEnd () ;
+s w i t c h (ch!
+int i ;
+case 1:
+a l C o l o r 3 f ( 0 . 0 , 0 . 4 , 0 . 2 , ;
+f o r ( i = 1 ; 1 <= length; i-
+X + d e l x ;
+y = y + d e l y ;
+g l B e g i n (GL_POINTS) ;
+giVertex2f(x, y) :
+glEnd() ;
+b r e a k ;
+c a s e 2 :
+x = x + d e l x ;
+d e l y ;
+i f ( i g 1 6 <= 8)
+glBegin (GL POINTS;;
+giVertex21(x, y) ;
+giEnd () ;
+break;
+case 3:
+glColor3f (0.0,0.4,0.2 ;
+f o r ( i =1; i<=length ; i - -
+x = x + d e l x ;
+v = У + dely;
+i f ( i % 8 == 0}
+glBegin (GL _POINTS) :
+gIVertex21 (x, y) :
+glEnd () ;
+}
+break;
+}
+/* case 4:
+}
+glFlush () ;
+2
+} v o i d i n i t ( v o i d ) i
+giClearColor (1. 0, 1.0,1.0,0.01;
+g l M a t r i x M o d e (GL P R O J E C T I O N ) ;
+gluorthoD (-640, 640.0, -480, 480.0) ;
+int main (int arge , char **argv)
+{
+cout<<"Enter the value of xl "<<endl;
+c i n > > x 1 ;
+cout<<"Enter the value of y2 "<<endi;
+c i n > > y 2 ; cout<<"Enter the value of x2 "<<endl;
+c i n > > x 2 ;
+cout<<"Enter the value of y3 "<<endl;
+c i n > > y 3 ;
+cout<<"1.Simple 2. Dashed 3. Dotted"<<endl;
+cout<<"enter your choice"<<endl;
+c i n > > c h ;
+g l u t I n i t ( & a rg c , a r g v ) ;
+g l u t I n i t D i s p l a y M o d e (GLUT_RGB | GLUT_SINGLE) ;
+glutInitWindowPosition (100, 150) ;
+glutInitWindowSize (640, 480) ;
+g l u t C r e a t e Wi n d o w ("Simple") ;
+glutDisplayFunc (display) ;
+g l u t M a i n L 
